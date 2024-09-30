@@ -33,13 +33,20 @@ do
                 java_opts=""
         fi
 
+        # Determine load size. Large for all unless unavailable.
+        size="large"
+        if [ "$bench" = "zxing" ] || [ "$bench" = "fop" ]
+        then
+                size="default"
+        fi
+
         # Run the benchmark and put all the results in scratch directory.
         # Also store gc logs.
         scratch_dir=$scratch_parent/$bench
         gc_file=$gc_parent/$bench.log
         mkdir $scratch_dir
         # TODO add -n 21 to stabilize the benchmark with 20 runs.
-        $java $java_opts $testing_opts -Xlog:gc*,metaspace*:file=$gc_file -jar $dacapo --scratch-directory $scratch_dir $bench
+        $java $java_opts $testing_opts -Xlog:gc*,metaspace*:file=$gc_file -jar $dacapo -s $size -n 21 --scratch-directory $scratch_dir $bench
 
 done
 
