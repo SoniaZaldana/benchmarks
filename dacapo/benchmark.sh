@@ -6,6 +6,7 @@ rm -r -f logs scratch
 # TODO update these to the proper Java version I'm measuring.
 java="/home/szaldana/jdk/build/linux-x86_64-server-release/images/jdk/bin/java"
 dacapo="dacapo-23.11-chopin.jar"
+callback="../dacapocallback/target/dacapocallback-1.0-SNAPSHOT.jar"
 curr_time="`date +"%H-%M-%S_%Y-%m-%d"`"
 java_opts=""
 testing_opts="-XX:+UnlockExperimentalVMOptions -XX:-UseCompactObjectHeaders"
@@ -15,6 +16,12 @@ testing_opts="-XX:+UnlockExperimentalVMOptions -XX:-UseCompactObjectHeaders"
 
 # TODO - remove. This is just so I don't have to do them all right now.
 #declare -a benchmarks=("batik")
+
+# Build latest callback
+echo "Building latest callback version"
+cd ../dacapocallback
+mvn clean install
+cd ../dacapo
 
 # create a directory to store gc logs and scratch data
 scratch_parent="scratch"
@@ -46,7 +53,7 @@ do
         gc_file=$gc_parent/$bench.log
         mkdir $scratch_dir
         # TODO add -n 21 to stabilize the benchmark with 20 runs.
-        $java $java_opts $testing_opts -Xlog:gc*,metaspace*:file=$gc_file -jar $dacapo -s $size -n 21 --scratch-directory $scratch_dir $bench
+        $java $java_opts $testing_opts -Xlog:gc*,metaspace*:file=$gc_file -cp $callback:$dacapo Harness -c org.sonia.TimeCallback -s $size -n 21 --scratch-directory $scratch_dir $bench
 
 done
 
