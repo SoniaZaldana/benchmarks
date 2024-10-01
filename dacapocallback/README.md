@@ -4,6 +4,6 @@
 
 `mvn install:install-file -Dfile=/path/to/your/file.jar -DgroupId=com.example -DartifactId=your-artifact -Dversion=1.0 -Dpackaging=jar`
 
-### Build the project 
+### 2. Build the project 
 
 `mvn clean install`
