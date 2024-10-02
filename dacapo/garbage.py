@@ -25,18 +25,49 @@ def main():
     else:
         parser.print_help()
 
+def extract_measurable_times(file):
+    last_warmup_time = None
+    measurable_time = None
+
+    warmup_pattern = re.compile(r'Warmup: Benchmark ended (\d+\.\d+)s')
+    with open(file, 'r') as warmup_file:
+        for line in warmup_file:
+            warmup_match = warmup_pattern.search(line)
+            if warmup_match:
+                last_warmup_time = float(warmup_match.group(1))
+
+    return last_warmup_time
+
+def filter_gc_logs(gc_file_path, start_time):
+    filtered_logs = []
+    gc_time_pattern = re.compile(r'\[(\d+\.\d+)s\]')
+
+    with open(gc_file_path, 'r') as gc_file:
+        for line in gc_file:
+            gc_time_match = gc_time_pattern.search(line)
+            if gc_time_match:
+                gc_time = float(gc_time_match.group(1))
+                if start_time <= gc_time:
+                    filtered_logs.append(line.strip())
+
+    return filtered_logs
 
 def do_metrics(func, benchmarks):
     for bench in benchmarks:
         print(f"Evaluating benchmark {bench}")
 
-        # Read file
-        filename = "logs/" + bench + ".log"
-        file = open(filename, "r")
-        lines = file.readlines()
+        # Discard warmup metrics
+        time_file_path = "logs/" + bench + ".time"
+        last_warmup_time = extract_measurable_times(time_file_path)
+        if last_warmup_time is None:
+            print(f"Error: Could determine warmup logs to discard for {bench}")
+            return
+
+        gc_file_path = "logs/" + bench + ".log"
+        filtered_gc_logs = filter_gc_logs(gc_file_path, last_warmup_time)
 
         # Invoke metric collection
-        func(lines, bench)
+        func(filtered_gc_logs, bench)
         print("***************************************************")
 
 
