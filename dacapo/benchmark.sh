@@ -51,9 +51,11 @@ do
         # Also store gc logs.
         scratch_dir=$scratch_parent/$bench
         gc_file=$gc_parent/$bench.log
+        time_log=$gc_parent/$bench.time
         mkdir $scratch_dir
+        touch $time_log
         # TODO add -n 21 to stabilize the benchmark with 20 runs.
-        $java $java_opts $testing_opts -Xlog:gc*,metaspace*:file=$gc_file -cp $callback:$dacapo Harness -c org.sonia.TimeCallback -s $size -n 21 --scratch-directory $scratch_dir $bench
+        $java $java_opts $testing_opts -Xlog:gc*,metaspace*:file=$gc_file -cp $callback:$dacapo Harness -c org.sonia.TimeCallback -s $size -n 6 --scratch-directory $scratch_dir $bench 2> $time_log
 
 done
 
