@@ -2,6 +2,7 @@ import re
 import sys
 import argparse
 import csv
+import os
 
 def main():
     print('================= Garbage Log Parser ===============')
@@ -10,24 +11,24 @@ def main():
     parser = argparse.ArgumentParser(description='Process Java GC logs.')
     parser.add_argument('-liveset', action='store_true', help='Calculate live set sizes. Stores as csv file ending .live')
     parser.add_argument('-gc', action='store_true', help='Gather GC metrics. Stores as csv file ending .gc')
+    parser.add_argument('-parent_dir', required=True, help='Parent directory for logs (e.g., parallel or g1)')
+    parser.add_argument('-compact', action='store_true', help='Use compact memory option, affecting output file paths')
+    parser.add_argument('-runs', type=int, required=True, help='Number of runs to consider for log file naming')
 
     args = parser.parse_args()
 
-    # benchmarks = ["avrora", "batik", "cassandra", "eclipse", "fop", "graphchi", "h2", "jme", "jython", "kafka", "luindex", "lusearch", "pmd", "spring", "sunflow", "tomcat", "tradebeans", "tradesoap", "xalan", "zxing"]
-
-    benchmarks = ["avrora"]
+    benchmarks = ["avrora", "batik", "cassandra", "eclipse", "fop", "graphchi", "h2", "jme", "jython", "kafka", "luindex", "lusearch", "pmd", "spring", "sunflow", "tomcat", "tradebeans", "tradesoap", "xalan", "zxing"]
 
     # Invoke metrics based on flags
     if args.liveset:
-        do_metrics(liveset_size, benchmarks)
+        do_metrics(liveset_size, benchmarks, args.parent_dir, args.compact, args.runs)
     elif args.gc:
-        do_metrics(gc_metrics, benchmarks)
+        do_metrics(gc_metrics, benchmarks, args.parent_dir, args.compact, args.runs)
     else:
         parser.print_help()
 
 def extract_measurable_times(file):
     last_warmup_time = None
-    measurable_time = None
 
     warmup_pattern = re.compile(r'Warmup: Benchmark ended (\d+\.\d+)s')
     with open(file, 'r') as warmup_file:
@@ -52,26 +53,27 @@ def filter_gc_logs(gc_file_path, start_time):
 
     return filtered_logs
 
-def do_metrics(func, benchmarks):
+def do_metrics(func, benchmarks, parent_dir, compact, runs):
     for bench in benchmarks:
         print(f"Evaluating benchmark {bench}")
 
-        # Discard warmup metrics
-        time_file_path = "logs/" + bench + ".time"
-        last_warmup_time = extract_measurable_times(time_file_path)
-        if last_warmup_time is None:
-            print(f"Error: Could determine warmup logs to discard for {bench}")
-            return
+        for run in range(1, runs + 1):
+            # Discard warmup metrics
+            time_file_path = os.path.join(parent_dir, f'logs{"" if not compact else "_compact"}', f"{bench}_run{run}.time")
+            print(time_file_path)
+            last_warmup_time = extract_measurable_times(time_file_path)
+            if last_warmup_time is None:
+                print(f"Error: Could not determine warmup logs to discard for {bench} run {run}")
+                continue  # Skip this run
 
-        gc_file_path = "logs/" + bench + ".log"
-        filtered_gc_logs = filter_gc_logs(gc_file_path, last_warmup_time)
+            gc_file_path = os.path.join(parent_dir, f'logs{"" if not compact else "_compact"}', f"{bench}_run{run}.log")
+            filtered_gc_logs = filter_gc_logs(gc_file_path, last_warmup_time)
 
-        # Invoke metric collection
-        func(filtered_gc_logs, bench)
-        print("***************************************************")
+            # Invoke metric collection
+            func(filtered_gc_logs, bench, parent_dir, compact)
+            print("***************************************************")
 
-
-def gc_metrics(lines, bench):
+def gc_metrics(lines, bench, parent_dir, compact):
     gc_total_time = 0
     total_user = 0
     total_sys = 0
@@ -84,14 +86,12 @@ def gc_metrics(lines, bench):
     cpu_pattern = re.compile(r'User=(\d+\.\d+)s\s+Sys=(\d+\.\d+)s\s+Real=(\d+\.\d+)s')
     for line in lines:
         if 'Pause Full' in line:
-            # Calculate full gc count and time
             match = pause_pattern.search(line)
             if match:
                 time = match.group(1)
                 gc_total_time += float(time)
                 pause_metrics.append([len(pause_metrics) + 1, time])
         else:
-            # Calculate cpu stats
             match = cpu_pattern.search(line)
             if match:
                 user_time = float(match.group(1))
@@ -99,34 +99,34 @@ def gc_metrics(lines, bench):
                 real_time = float(match.group(3))
                 total_user += user_time
                 total_sys += sys_time
-                total_sys += real_time
+                total_real += real_time
                 cpu_metrics.append([len(cpu_metrics) + 1, user_time, sys_time, real_time])
 
     print(f"GC count: {len(pause_metrics)}")
     print(f"GC full total time: {gc_total_time}ms")
     print(f"CPU usage: User={total_user}s Sys={total_sys}s Real={total_real}s")
 
-    write_gc_to_csv(pause_metrics, "logs/" + bench + ".gc")
-    write_cpu_to_csv(cpu_metrics, "logs/" + bench + ".cpu")
+    log_suffix = "_compact" if compact else ""
+    write_gc_to_csv(pause_metrics, os.path.join(parent_dir, f'logs{log_suffix}', f"{bench}.gc"))
+    write_cpu_to_csv(cpu_metrics, os.path.join(parent_dir, f'logs{log_suffix}', f"{bench}.cpu"))
 
-def liveset_size(lines, bench):
+def liveset_size(lines, bench, parent_dir, compact):
     live_set_sizes = []
     total_live = 0
     live_pattern = re.compile(r'GC\(\d+\).*?Pause Full.*?(\d+)M->(\d+)M')
     for line in lines:
-        # Calculate full gc count and time
         match = live_pattern.search(line)
         if match:
-            # Memory before and after GC
-            before_gc = int(match.group(1))  # before
-            after_gc = int(match.group(2))   # after
+            before_gc = int(match.group(1))
+            after_gc = int(match.group(2))
             total_live += after_gc
             live_set_sizes.append([len(live_set_sizes) + 1, before_gc, after_gc])
 
     print(f"GC count: {len(live_set_sizes)}")
-    if (len(live_set_sizes) > 0):
+    if len(live_set_sizes) > 0:
         print(f"Average liveset size: {total_live / len(live_set_sizes)}")
-    write_live_set_to_csv(live_set_sizes, "logs/" + bench + ".live")
+    log_suffix = "_compact" if compact else ""
+    write_live_set_to_csv(live_set_sizes, os.path.join(parent_dir, f'logs{log_suffix}', f"{bench}.live"))
 
 def write_gc_to_csv(gc_metrics, output_file):
     with open(output_file, 'w', newline='') as csvfile:
