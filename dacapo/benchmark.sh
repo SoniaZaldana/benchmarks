@@ -41,12 +41,11 @@ rm -rf parallel g1
 java="/home/szaldana/jdk/build/linux-x86_64-server-release/images/jdk/bin/java"
 dacapo="dacapo-23.11-chopin.jar"
 callback="../dacapocallback/target/dacapocallback-1.0-SNAPSHOT.jar"
-java_opts=""
-testing_opts="-XX:+UnlockExperimentalVMOptions"
+java_opts="-XX:+UnlockExperimentalVMOptions"
 
 # Add options based on flags
 if $parallel; then
-    java_opts="$java_opts -XX:+UseParallelCollector"
+    java_opts="$java_opts -XX:+UseParallelGC"
 fi
 
 if $compact; then
@@ -113,6 +112,6 @@ for bench in "${benchmarks[@]}"; do
         touch "$time_log"
 
         # Run the benchmark
-        $java $java_opts $testing_opts -Xlog:gc*,metaspace*:file="$gc_file" -cp "$callback:$dacapo" Harness -c org.sonia.TimeCallback -s "$size" -n 1 --scratch-directory "$scratch_dir" "$bench" 2> "$time_log"
+        $java $java_opts -Xlog:gc*,metaspace*:file="$gc_file" -cp "$callback:$dacapo" Harness -c org.sonia.TimeCallback -s "$size" -n 1 --scratch-directory "$scratch_dir" "$bench" 2> "$time_log"
     done
 done
