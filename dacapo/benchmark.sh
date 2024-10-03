@@ -81,7 +81,7 @@ mkdir -p "$scratch_parent"
 mkdir -p "$gc_parent"
 
 # Declare benchmarks
-declare -a benchmarks=("avrora" "batik" "cassandra" "eclipse" "fop" "graphchi" "h2" "jme" "jython" "kafka" "luindex" "lusearch" "pmd" "spring" "sunflow" "tomcat" "tradebeans" "tradesoap" "xalan" "zxing")
+declare -a benchmarks=("avrora" "batik" "cassandra" "eclipse" "fop" "graphchi" "h2" "jme" "jython" "kafka" "luindex" "lusearch" "pmd" "spring" "sunflow" "tomcat" "xalan" "zxing")
 
 # Build latest callback
 echo "Building latest callback version"
@@ -113,6 +113,6 @@ for bench in "${benchmarks[@]}"; do
         touch "$time_log"
 
         # Run the benchmark
-        $java $java_opts -Xlog:gc*,metaspace*:file="$gc_file" -cp "$callback:$dacapo" Harness -c org.sonia.TimeCallback -s "default" -n 1 --scratch-directory "$scratch_dir" "$bench" 2> "$time_log"
+        $java $java_opts -Xlog:gc*,metaspace*:file="$gc_file" -cp "$callback:$dacapo" Harness -c org.sonia.TimeCallback -s "default" -n 2 --scratch-directory "$scratch_dir" "$bench" 2> "$time_log"
     done
 done
