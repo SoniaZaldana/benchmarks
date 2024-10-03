@@ -38,7 +38,8 @@ done
 rm -rf parallel g1
 
 # Java and DaCapo paths
-java="/home/szaldana/jdk/build/linux-x86_64-server-release/images/jdk/bin/java"
+java="/home/szaldana/jdk/build/linux-x86_64-server-release/images/jdk/bin/java" # local
+# java="/root/tests/jdk/build/linux-x86_64-server-release/images/jdk/bin/java"  # beaker
 dacapo="dacapo-23.11-chopin.jar"
 callback="../dacapocallback/target/dacapocallback-1.0-SNAPSHOT.jar"
 java_opts="-XX:+UnlockExperimentalVMOptions"
@@ -112,6 +113,6 @@ for bench in "${benchmarks[@]}"; do
         touch "$time_log"
 
         # Run the benchmark
-        $java $java_opts -Xlog:gc*,metaspace*:file="$gc_file" -cp "$callback:$dacapo" Harness -c org.sonia.TimeCallback -s "$size" -n 1 --scratch-directory "$scratch_dir" "$bench" 2> "$time_log"
+        $java $java_opts -Xlog:gc*,metaspace*:file="$gc_file" -cp "$callback:$dacapo" Harness -c org.sonia.TimeCallback -s "default" -n 1 --scratch-directory "$scratch_dir" "$bench" 2> "$time_log"
     done
 done
