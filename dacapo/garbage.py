@@ -67,13 +67,15 @@ def do_metrics(func, benchmarks, parent_dir, compact, runs):
                 continue  # Skip this run
 
             gc_file_path = os.path.join(parent_dir, f'logs{"" if not compact else "_compact"}', f"{bench}_run{run}.log")
-            filtered_gc_logs = filter_gc_logs(gc_file_path, last_warmup_time)
 
             # Invoke metric collection
             if func == liveset_size:
-                func(filtered_gc_logs, bench, run, parent_dir, compact)
+                file = open(gc_file_path, "r")
+                lines = file.readlines()
+                func(lines, bench, run, parent_dir, compact)
             else:
-                func(filtered_gc_logs, bench, run, parent_dir, compact) 
+                filtered_gc_logs = filter_gc_logs(gc_file_path, last_warmup_time)
+                func(filtered_gc_logs, bench, run, parent_dir, compact)
         print("***************************************************")
 
 def gc_metrics(lines, bench, run, parent_dir, compact):
@@ -85,13 +87,13 @@ def gc_metrics(lines, bench, run, parent_dir, compact):
     pause_metrics = []
     cpu_metrics = []
 
-    pause_pattern = re.compile(r'Pause\s+Full.*?(\d+\.\d+)ms')
+    pause_pattern = re.compile(r'Pause [A-Za-z]+\s+\(.*?\)\s+(\d+)M->\d+M\(\d+M\)\s+(\d+\.\d+)ms')
     cpu_pattern = re.compile(r'User=(\d+\.\d+)s\s+Sys=(\d+\.\d+)s\s+Real=(\d+\.\d+)s')
     for line in lines:
-        if 'Pause Full' in line:
+        if 'Pause' in line:
             match = pause_pattern.search(line)
             if match:
-                time = match.group(1)
+                time = match.group(2)
                 gc_total_time += float(time)
                 pause_metrics.append([len(pause_metrics) + 1, time])
         else:
@@ -106,7 +108,7 @@ def gc_metrics(lines, bench, run, parent_dir, compact):
                 cpu_metrics.append([len(cpu_metrics) + 1, user_time, sys_time, real_time])
 
     print(f"GC count: {len(pause_metrics)}")
-    print(f"GC full total time: {gc_total_time}ms")
+    print(f"GC pause total time: {gc_total_time}ms")
     print(f"CPU usage: User={total_user}s Sys={total_sys}s Real={total_real}s")
 
     # Create output file path for this run
@@ -133,7 +135,7 @@ def liveset_size(lines, bench, run, parent_dir, compact):
 
     print(f"GC count: {len(live_set_sizes)}")
     if len(live_set_sizes) > 0:
-        print(f"Average live set size: {total_live / len(live_set_sizes)}")
+        print(f"Average live set size: {total_live / len(live_set_sizes)} MB")
 
     # Create output file path for this run
     log_suffix = "_compact" if compact else ""
