@@ -42,7 +42,7 @@ java="/home/szaldana/jdk/build/linux-x86_64-server-release/images/jdk/bin/java" 
 # java="/root/tests/jdk/build/linux-x86_64-server-release/images/jdk/bin/java"  # beaker
 dacapo="dacapo-23.11-chopin.jar"
 callback="../dacapocallback/target/dacapocallback-1.0-SNAPSHOT.jar"
-java_opts="-XX:+UnlockExperimentalVMOptions"
+java_opts="-XX:+UnlockExperimentalVMOptions -Xms256m"
 
 # Add options based on flags
 if $parallel; then
@@ -108,6 +108,7 @@ mkdir -p "$gc_parent"
 
 # Declare benchmarks
 declare -a benchmarks=("avrora" "batik" "cassandra" "eclipse" "fop" "graphchi" "h2" "jme" "jython" "kafka" "luindex" "lusearch" "pmd" "spring" "sunflow" "tomcat" "xalan" "zxing")
+# declare -a benchmarks=("avrora")
 
 # Build latest callback
 echo "Building latest callback version"
@@ -139,6 +140,6 @@ for bench in "${benchmarks[@]}"; do
         touch "$time_log"
 
         # Run the benchmark
-        $java $java_opts -Xlog:gc*,metaspace*:file="$gc_file" -cp "$callback:$dacapo" Harness -c org.sonia.TimeCallback -s "default" -n 2 --scratch-directory "$scratch_dir" "$bench" 2> "$time_log"
+        $java $java_opts -Xlog:gc*,metaspace*:file="$gc_file" -cp "$callback:$dacapo" Harness -c org.sonia.TimeCallback -s "$size"  --no-pre-iteration-gc -n 21 --scratch-directory "$scratch_dir" "$bench" 2> "$time_log"
     done
 done
