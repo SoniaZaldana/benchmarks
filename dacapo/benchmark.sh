@@ -136,12 +136,14 @@ for bench in "${benchmarks[@]}"; do
         gc_file="$gc_parent/${bench}_run${run}.log"
         time_log="$gc_parent/${bench}_run${run}.time"
         perf_output_file="$gc_parent/${bench}_run${run}.perf"
+        stdout_file="$gc_parent/${bench}_run${run}.stdout"
 
         # Create the specific scratch directory for this run
         mkdir -p "$scratch_dir"
         touch "$time_log"
+        touch "$stdout_file"
 
         # Run the benchmark
-        perf stat -e $perf_opts -o "$perf_output_file" $java $java_opts -Xlog:gc*,metaspace*:file="$gc_file" -cp "$callback:$dacapo" Harness -c org.sonia.TimeCallback -s "$size"  --no-pre-iteration-gc -n 21 --scratch-directory "$scratch_dir" "$bench" 2> "$time_log"
+        perf stat -e $perf_opts -o "$perf_output_file" $java $java_opts -Xlog:gc*,metaspace*:file="$gc_file" -cp "$callback:$dacapo" Harness -c org.sonia.TimeCallback -s "$size" --no-pre-iteration-gc -n 21 --scratch-directory "$scratch_dir" "$bench" > "$stdout_file" 2> "$time_log"
     done
 done

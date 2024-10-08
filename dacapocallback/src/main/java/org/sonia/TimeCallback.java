@@ -29,6 +29,6 @@ public class TimeCallback extends Callback {
         float endTime = (System.currentTimeMillis() - startTime) / (float) 1000;
         String end = String.format("%sBenchmark ended %fs", isWarmup() ? "Warmup: " : "Measurable: ", endTime);
         System.err.println(end);
-        System.err.flush();
+        super.stop(duration);
     }
 }
