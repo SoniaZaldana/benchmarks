@@ -11,6 +11,7 @@ def main():
     parser = argparse.ArgumentParser(description='Process Java GC logs.')
     parser.add_argument('-liveset', action='store_true', help='Calculate live set sizes. Stores as csv file ending .live')
     parser.add_argument('-gc', action='store_true', help='Gather GC metrics. Stores as csv file ending .gc')
+    parser.add_argument('-runtime', action='store_true', help='Extract runtime metrics from *.time files.')
     parser.add_argument('-parent_dir', required=True, help='Parent directory for logs (e.g., parallel or g1)')
     parser.add_argument('-compact', action='store_true', help='Use compact memory option, affecting output file paths')
     parser.add_argument('-runs', type=int, required=True, help='Number of runs to consider for log file naming')
@@ -20,12 +21,73 @@ def main():
     benchmarks = ["avrora", "batik", "cassandra", "eclipse", "fop", "graphchi", "h2", "jme", "jython", "kafka", "luindex", "lusearch", "pmd", "spring", "sunflow", "tomcat", "xalan", "zxing"]
 
     # Invoke metrics based on flags
-    if args.liveset:
+    if args.runtime:
+        extract_performance_metrics(benchmarks, args.parent_dir, args.compact, args.runs)
+    elif args.liveset:
         do_metrics(liveset_size, benchmarks, args.parent_dir, args.compact, args.runs)
     elif args.gc:
         do_metrics(gc_metrics, benchmarks, args.parent_dir, args.compact, args.runs)
     else:
         parser.print_help()
+
+def main():
+    print('================= Garbage Log Parser ===============')
+
+    # Set up argument parsing
+    parser = argparse.ArgumentParser(description='Process Java GC logs.')
+    parser.add_argument('-liveset', action='store_true', help='Calculate live set sizes. Stores as csv file ending .live')
+    parser.add_argument('-gc', action='store_true', help='Gather GC metrics. Stores as csv file ending .gc')
+    parser.add_argument('-runtime', action='store_true', help='Extract runtime metrics from *.time files.')
+    parser.add_argument('-parent_dir', required=True, help='Parent directory for logs (e.g., parallel or g1)')
+    parser.add_argument('-compact', action='store_true', help='Use compact memory option, affecting output file paths')
+    parser.add_argument('-runs', type=int, required=True, help='Number of runs to consider for log file naming')
+
+    args = parser.parse_args()
+
+    benchmarks = ["avrora", "batik", "cassandra", "eclipse", "fop", "graphchi", "h2", "jme", "jython", "kafka", "luindex", "lusearch", "pmd", "spring", "sunflow", "tomcat", "xalan", "zxing"]
+
+    # Invoke metrics based on flags
+    if args.runtime:
+        extract_performance_metrics(benchmarks, args.parent_dir, args.compact, args.runs)
+    elif args.liveset:
+        do_metrics(liveset_size, benchmarks, args.parent_dir, args.compact, args.runs)
+    elif args.gc:
+        do_metrics(gc_metrics, benchmarks, args.parent_dir, args.compact, args.runs)
+    else:
+        parser.print_help()
+
+def extract_performance_metrics(benchmarks, parent_dir, compact, runs):
+    for bench in benchmarks:
+        print(f"Evaluating benchmark {bench} for runtime metrics")
+        runtime_metrics = []
+
+        for run in range(1, runs + 1):
+            time_file_path = os.path.join(parent_dir, f'logs{"" if not compact else "_compact"}', f"{bench}_run{run}.time")
+            if os.path.exists(time_file_path):
+                with open(time_file_path, 'r') as time_file:
+                    for line in time_file:
+                        # Check for the specific performance line
+                        match = re.search(r'===== DaCapo 23.11-chopin (.+?) PASSED in (\d+) msec =====', line)
+                        if match:
+                            benchmark_name = match.group(1)
+                            runtime = match.group(2)
+                            runtime_metrics.append([run, runtime])
+                            print(f"{benchmark_name} runtime: {runtime} msec")
+                            break
+            else:
+                print(f"Warning: {time_file_path} not found.")
+
+        # Write metrics to CSV
+        if runtime_metrics:
+            runtime_output_file = os.path.join(parent_dir, f'logs{"" if not compact else "_compact"}', f"{bench}.runtime")
+            write_runtime_to_csv(runtime_metrics, runtime_output_file)
+
+def write_runtime_to_csv(runtime_metrics, output_file):
+    with open(output_file, 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(['Run Number', 'Runtime (msecs)'])
+        writer.writerows(runtime_metrics)
+
 
 def extract_measurable_times(file):
     last_warmup_time = None
