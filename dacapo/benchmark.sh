@@ -43,6 +43,7 @@ java="/home/szaldana/jdk/build/linux-x86_64-server-release/images/jdk/bin/java" 
 dacapo="dacapo-23.11-chopin.jar"
 callback="../dacapocallback/target/dacapocallback-1.0-SNAPSHOT.jar"
 java_opts="-XX:+UnlockExperimentalVMOptions -Xms256m"
+perf_opts="L1-dcache-loads,L1-dcache-load-misses,L1-icache-load-misses,LLC-loads,LLC-load-misses,instructions,branches,branch-misses"
 
 # Add options based on flags
 if $parallel; then
@@ -114,7 +115,7 @@ declare -a benchmarks=("avrora" "batik" "cassandra" "eclipse" "fop" "graphchi" "
 echo "Building latest callback version"
 (cd ../dacapocallback && mvn clean install)
 
-# Run benchmarks and collect GC log files
+# Run benchmarks and collect GC log and perf files
 for bench in "${benchmarks[@]}"; do
     for ((run=1; run<=num_runs; run++)); do
         echo "******************* Running benchmark $bench - Run $run *******************"
@@ -134,12 +135,13 @@ for bench in "${benchmarks[@]}"; do
         scratch_dir="$scratch_parent/${bench}_run${run}"
         gc_file="$gc_parent/${bench}_run${run}.log"
         time_log="$gc_parent/${bench}_run${run}.time"
+        perf_output_file="$gc_parent/${bench}_run${run}.perf"
 
         # Create the specific scratch directory for this run
         mkdir -p "$scratch_dir"
         touch "$time_log"
 
         # Run the benchmark
-        $java $java_opts -Xlog:gc*,metaspace*:file="$gc_file" -cp "$callback:$dacapo" Harness -c org.sonia.TimeCallback -s "$size"  --no-pre-iteration-gc -n 21 --scratch-directory "$scratch_dir" "$bench" 2> "$time_log"
+        perf stat -e $perf_opts -o "$perf_output_file" $java $java_opts -Xlog:gc*,metaspace*:file="$gc_file" -cp "$callback:$dacapo" Harness -c org.sonia.TimeCallback -s "$size"  --no-pre-iteration-gc -n 21 --scratch-directory "$scratch_dir" "$bench" 2> "$time_log"
     done
 done
