@@ -39,7 +39,7 @@ rm -rf parallel g1
 
 # Java and DaCapo paths
 java="/home/szaldana/jdk/build/linux-x86_64-server-release/images/jdk/bin/java" # local
-jcmd="/home/szaldana/jdk/build/linux-x86_64-server-release/images/jdk/bin/jcmd"
+jcmd="/home/szaldana/jdk/build/linux-x86_64-server-release/images/jdk/bin/jcmd" # local
 
 # java="/root/tests/jdk/build/linux-x86_64-server-release/images/jdk/bin/java"  # beaker
 # jcmd="/root/tests/jdk/build/linux-x86_64-server-release/images/jdk/bin/jcmd"  # beaker
@@ -112,7 +112,7 @@ mkdir -p "$scratch_parent"
 mkdir -p "$gc_parent"
 
 # Declare benchmarks
-declare -a benchmarks=("avrora")
+# declare -a benchmarks=("avrora")
 # declare -a benchmarks=("avrora" "batik" "cassandra" "eclipse" "fop" "graphchi" "h2" "jme" "jython" "kafka" "luindex" "lusearch" "pmd" "spring" "sunflow" "tomcat" "xalan" "zxing")
 
 
@@ -155,12 +155,12 @@ for bench in "${benchmarks[@]}"; do
         (
             while true; do
                 run_gc
-                sleep 120 # Run every 2 minutes
+                sleep 180 # Run every 3 minutes
             done
         ) & gc_pid=$!
 
         # Run the benchmark
-        $java $java_opts -Xlog:gc*,metaspace*:file="$gc_file" -cp "$callback:$dacapo" Harness -c org.sonia.TimeCallback -s "$size" --no-pre-iteration-gc -n 5 --scratch-directory "$scratch_dir" "$bench" 2> "$time_log"
+        $java $java_opts -Xlog:gc*,metaspace*:file="$gc_file" -cp "$callback:$dacapo" Harness -c org.sonia.LiveCallback -s "$size" --no-pre-iteration-gc -n 30 --scratch-directory "$scratch_dir" "$bench" 2> "$time_log"
 
         # Stop the GC process after benchmark completes
         kill "$gc_pid"

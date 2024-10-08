@@ -67,14 +67,12 @@ def do_metrics(func, benchmarks, parent_dir, compact, runs):
                 continue  # Skip this run
 
             gc_file_path = os.path.join(parent_dir, f'logs{"" if not compact else "_compact"}', f"{bench}_run{run}.log")
+            filtered_gc_logs = filter_gc_logs(gc_file_path, last_warmup_time)
 
             # Invoke metric collection
             if func == liveset_size:
-                file = open(gc_file_path, "r")
-                lines = file.readlines()
-                func(lines, bench, run, parent_dir, compact)
+                func(filtered_gc_logs, bench, run, parent_dir, compact)
             else:
-                filtered_gc_logs = filter_gc_logs(gc_file_path, last_warmup_time)
                 func(filtered_gc_logs, bench, run, parent_dir, compact)
         print("***************************************************")
 
