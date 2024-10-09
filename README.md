@@ -8,7 +8,7 @@ I use the [latest version]( https://github.com/dacapobench/dacapobench/releases/
 ### Load size 
 Since there are different sizes available for the workloads’ inputs in DaCapo, I set the input size using the switch `-s`. 
 I use a `large` load if available to increase the number of live objects in the heap and make GCs work frequently. 
-Otherwise, I set the input size to default (benchmarks zxing and fop). 
+Otherwise, I set the input size to default (benchmarks `zxing` and `fop`). 
 
 ### DaCapo's System.gc() calls 
 DaCapo automatically triggers a System.gc() call before the start of each iteration. I explicitly disable GC calls in the workload’s call using the `-no-pre-iteration-gc` switch so as to not skew GC metrics. 
@@ -28,7 +28,7 @@ Controlling the heap size, I ensure we are working on the same workloads with th
 I am conducting this experiment using G1 and the parallel collector.
 
 ### Warmup
-I warmup each benchmark by executing it `20` times before measuring results.  I chose 20 because DaCapo suite’s built-in mechanism automatically detects a steady state after at most 20 warmups. [Source]([url](https://research.spec.org/icpe_proceedings/2017/proceedings/p3.pdf)). 
+I warmup each benchmark by executing it `20` times before measuring results.  I chose 20 because DaCapo suite’s built-in mechanism automatically detects a steady state after at most 20 warmups. [Source](https://research.spec.org/icpe_proceedings/2017/proceedings/p3.pdf). 
 
 I specify the number of iterations using the `-n` switch. 
 
