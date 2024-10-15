@@ -1,131 +1,0 @@
-WARNING: package jdk.internal.util.jar not in java.base
-WARNING: A restricted method in java.lang.System has been called
-WARNING: java.lang.System::loadLibrary has been called by io.netty.util.internal.NativeLibraryUtil in an unnamed module (file:/root/tests/benchmarks/dacapo/dacapo-23.11-chopin/jar/cassandra/netty-common-4.1.96.Final.jar)
-WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
-WARNING: Restricted methods will be blocked in a future release unless native access is enabled
-
-WARNING: A terminally deprecated method in java.lang.System has been called
-WARNING: System::setSecurityManager has been called by org.apache.cassandra.security.ThreadAwareSecurityManager (file:/root/tests/benchmarks/dacapo/dacapo-23.11-chopin/jar/cassandra/cassandra-1ba458c-pre-5.1.jar)
-WARNING: Please consider reporting this to the maintainers of org.apache.cassandra.security.ThreadAwareSecurityManager
-WARNING: System::setSecurityManager will be removed in a future release
-===== DaCapo 23.11-chopin cassandra starting warmup 1 =====
-Loading database... 
-    YCSB Client 0.17.0
-    workload: site.ycsb.workloads.TimeSeriesWorkload
-    records: 9437184
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Starting 1179648 requests...
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Completed requests
-Warmup: Benchmark ended 1604.000977s
-===== DaCapo 23.11-chopin cassandra completed warmup 1 in 1563803 msec =====
-===== DaCapo 23.11-chopin cassandra starting warmup 2 =====
-Loading database... 
-    YCSB Client 0.17.0
-    workload: site.ycsb.workloads.TimeSeriesWorkload
-    records: 9437184
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Starting 1179648 requests...
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Completed requests
-Warmup: Benchmark ended 3074.297119s
-===== DaCapo 23.11-chopin cassandra completed warmup 2 in 1469792 msec =====
-===== DaCapo 23.11-chopin cassandra starting warmup 3 =====
-Loading database... 
-    YCSB Client 0.17.0
-    workload: site.ycsb.workloads.TimeSeriesWorkload
-    records: 9437184
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Starting 1179648 requests...
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Completed requests
-Warmup: Benchmark ended 4522.515137s
-===== DaCapo 23.11-chopin cassandra completed warmup 3 in 1448001 msec =====
-===== DaCapo 23.11-chopin cassandra starting warmup 4 =====
-Loading database... 
-    YCSB Client 0.17.0
-    workload: site.ycsb.workloads.TimeSeriesWorkload
-    records: 9437184
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Starting 1179648 requests...
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Completed requests
-Warmup: Benchmark ended 6096.846191s
-===== DaCapo 23.11-chopin cassandra completed warmup 4 in 1574192 msec =====
-===== DaCapo 23.11-chopin cassandra starting warmup 5 =====
-Loading database... 
-    YCSB Client 0.17.0
-    workload: site.ycsb.workloads.TimeSeriesWorkload
-    records: 9437184
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Starting 1179648 requests...
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Completed requests
-Warmup: Benchmark ended 7722.659180s
-===== DaCapo 23.11-chopin cassandra completed warmup 5 in 1625663 msec =====
-===== DaCapo 23.11-chopin cassandra starting warmup 6 =====
-Loading database... 
-    YCSB Client 0.17.0
-    workload: site.ycsb.workloads.TimeSeriesWorkload
-    records: 9437184
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Starting 1179648 requests...
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Completed requests
-Warmup: Benchmark ended 9307.073242s
-===== DaCapo 23.11-chopin cassandra completed warmup 6 in 1584269 msec =====
-===== DaCapo 23.11-chopin cassandra starting warmup 7 =====
-Loading database... 
-    YCSB Client 0.17.0
-    workload: site.ycsb.workloads.TimeSeriesWorkload
-    records: 9437184
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Starting 1179648 requests...
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Completed requests
-Warmup: Benchmark ended 10968.786133s
-===== DaCapo 23.11-chopin cassandra completed warmup 7 in 1661546 msec =====
-===== DaCapo 23.11-chopin cassandra starting warmup 8 =====
-Loading database... 
-    YCSB Client 0.17.0
-    workload: site.ycsb.workloads.TimeSeriesWorkload
-    records: 9437184
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Starting 1179648 requests...
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Completed requests
-Warmup: Benchmark ended 12539.523438s
-===== DaCapo 23.11-chopin cassandra completed warmup 8 in 1570564 msec =====
-===== DaCapo 23.11-chopin cassandra starting warmup 9 =====
-Loading database... 
-    YCSB Client 0.17.0
-    workload: site.ycsb.workloads.TimeSeriesWorkload
-    records: 9437184
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Starting 1179648 requests...
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Completed requests
-Warmup: Benchmark ended 14068.408203s
-===== DaCapo 23.11-chopin cassandra completed warmup 9 in 1528747 msec =====
-===== DaCapo 23.11-chopin cassandra starting warmup 10 =====
-Loading database... 
-    YCSB Client 0.17.0
-    workload: site.ycsb.workloads.TimeSeriesWorkload
-    records: 9437184
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Starting 1179648 requests...
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Completed requests
-Warmup: Benchmark ended 15688.869141s
-===== DaCapo 23.11-chopin cassandra completed warmup 10 in 1620335 msec =====
-===== DaCapo 23.11-chopin cassandra starting =====
-Loading database... 
-    YCSB Client 0.17.0
-    workload: site.ycsb.workloads.TimeSeriesWorkload
-    records: 9437184
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Starting 1179648 requests...
-    5%    10%    15%    20%    25%    30%    35%    40%    45%    50%    55%    60%    65%    70%    75%    80%    85%    90%    95%    100%
-Completed requests
-Measurable: Benchmark ended 17238.423828s
-===== DaCapo 23.11-chopin cassandra PASSED in 1549423 msec =====
