@@ -1,0 +1,67 @@
+WARNING: package jdk.internal.util.jar not in java.base
+===== DaCapo 23.11-chopin kafka starting warmup 1 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 59.146999s
+===== DaCapo 23.11-chopin kafka completed warmup 1 in 56212 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 2 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 112.489998s
+===== DaCapo 23.11-chopin kafka completed warmup 2 in 52037 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 3 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 165.479004s
+===== DaCapo 23.11-chopin kafka completed warmup 3 in 51861 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 4 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 218.378998s
+===== DaCapo 23.11-chopin kafka completed warmup 4 in 51600 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 5 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 271.261993s
+===== DaCapo 23.11-chopin kafka completed warmup 5 in 51617 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 6 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 324.384003s
+===== DaCapo 23.11-chopin kafka completed warmup 6 in 51835 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 7 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 376.976990s
+===== DaCapo 23.11-chopin kafka completed warmup 7 in 51330 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 8 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 429.885010s
+===== DaCapo 23.11-chopin kafka completed warmup 8 in 51621 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 9 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 482.473999s
+===== DaCapo 23.11-chopin kafka completed warmup 9 in 51313 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 10 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 535.388977s
+===== DaCapo 23.11-chopin kafka completed warmup 10 in 51597 msec =====
+===== DaCapo 23.11-chopin kafka starting =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Measurable: Benchmark ended 587.908997s
+===== DaCapo 23.11-chopin kafka PASSED in 51236 msec =====

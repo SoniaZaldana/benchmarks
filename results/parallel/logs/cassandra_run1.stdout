@@ -1,0 +1,26 @@
+Using scaled threading model. 2 processors detected, 2 threads used to drive the workload, in a possible range of [1,unlimited]
+Version: cassandra 1ba458c-pre-5.0 ycsb 0.17.0 datastax 4.11.0 (use -p to print nominal benchmark stats)
+Cassandra starting...
+YCSB starting...
+===== DaCapo simple tail latency: 50% 286 usec, 90% 421 usec, 99% 692 usec, 99.9% 3434 usec, 99.99% 6586 usec, max 30156 usec, measured over 1179648 events =====
+===== DaCapo metered tail latency: 50% 2504802 usec, 90% 5243025 usec, 99% 5863729 usec, 99.9% 5923017 usec, 99.99% 5930992 usec, max 5931886 usec, measured over 1179648 events =====
+===== DaCapo simple tail latency: 50% 294 usec, 90% 436 usec, 99% 606 usec, 99.9% 3203 usec, 99.99% 5947 usec, max 16365 usec, measured over 1179648 events =====
+===== DaCapo metered tail latency: 50% 1320088 usec, 90% 1629676 usec, 99% 1800306 usec, 99.9% 1832566 usec, 99.99% 1843548 usec, max 1844285 usec, measured over 1179648 events =====
+===== DaCapo simple tail latency: 50% 311 usec, 90% 462 usec, 99% 655 usec, 99.9% 3186 usec, 99.99% 7028 usec, max 238485 usec, measured over 1179648 events =====
+===== DaCapo metered tail latency: 50% 368 usec, 90% 456634 usec, 99% 639052 usec, 99.9% 726796 usec, 99.99% 733281 usec, max 734041 usec, measured over 1179648 events =====
+===== DaCapo simple tail latency: 50% 282 usec, 90% 409 usec, 99% 557 usec, 99.9% 3161 usec, 99.99% 6594 usec, max 14958 usec, measured over 1179648 events =====
+===== DaCapo metered tail latency: 50% 368 usec, 90% 615492 usec, 99% 1054020 usec, 99.9% 1080427 usec, 99.99% 1084725 usec, max 1085136 usec, measured over 1179648 events =====
+===== DaCapo simple tail latency: 50% 303 usec, 90% 442 usec, 99% 589 usec, 99.9% 2883 usec, 99.99% 6144 usec, max 24010 usec, measured over 1179648 events =====
+===== DaCapo metered tail latency: 50% 427957 usec, 90% 1109917 usec, 99% 1464176 usec, 99.9% 1502197 usec, 99.99% 1519318 usec, max 1519767 usec, measured over 1179648 events =====
+===== DaCapo simple tail latency: 50% 296 usec, 90% 435 usec, 99% 606 usec, 99.9% 2916 usec, 99.99% 7069 usec, max 153616 usec, measured over 1179648 events =====
+===== DaCapo metered tail latency: 50% 89175 usec, 90% 560965 usec, 99% 842965 usec, 99.9% 856396 usec, 99.99% 859313 usec, max 860367 usec, measured over 1179648 events =====
+===== DaCapo simple tail latency: 50% 278 usec, 90% 401 usec, 99% 557 usec, 99.9% 2867 usec, 99.99% 6938 usec, max 183482 usec, measured over 1179648 events =====
+===== DaCapo metered tail latency: 50% 335 usec, 90% 271411 usec, 99% 468688 usec, 99.9% 482579 usec, 99.99% 483742 usec, max 484330 usec, measured over 1179648 events =====
+===== DaCapo simple tail latency: 50% 352 usec, 90% 540 usec, 99% 802 usec, 99.9% 3604 usec, 99.99% 7151 usec, max 19169 usec, measured over 1179648 events =====
+===== DaCapo metered tail latency: 50% 706396 usec, 90% 2067331 usec, 99% 2901418 usec, 99.9% 2934338 usec, 99.99% 2942039 usec, max 2942722 usec, measured over 1179648 events =====
+===== DaCapo simple tail latency: 50% 305 usec, 90% 450 usec, 99% 634 usec, 99.9% 3112 usec, 99.99% 6569 usec, max 18423 usec, measured over 1179648 events =====
+===== DaCapo metered tail latency: 50% 1776863 usec, 90% 2391656 usec, 99% 2565197 usec, 99.9% 2598167 usec, 99.99% 2608822 usec, max 2611284 usec, measured over 1179648 events =====
+===== DaCapo simple tail latency: 50% 294 usec, 90% 430 usec, 99% 589 usec, 99.9% 2818 usec, 99.99% 6529 usec, max 15466 usec, measured over 1179648 events =====
+===== DaCapo metered tail latency: 50% 813749 usec, 90% 1941335 usec, 99% 2073313 usec, 99.9% 2097651 usec, 99.99% 2103093 usec, max 2103723 usec, measured over 1179648 events =====
+===== DaCapo simple tail latency: 50% 301 usec, 90% 442 usec, 99% 606 usec, 99.9% 3137 usec, 99.99% 6209 usec, max 17252 usec, measured over 1179648 events =====
+===== DaCapo metered tail latency: 50% 500216 usec, 90% 1319867 usec, 99% 1501250 usec, 99.9% 1545079 usec, 99.99% 1551424 usec, max 1552515 usec, measured over 1179648 events =====

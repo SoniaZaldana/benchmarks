@@ -1,0 +1,37 @@
+WARNING: package jdk.internal.util.jar not in java.base
+===== DaCapo 23.11-chopin graphchi starting warmup 1 =====
+java.lang.reflect.InvocationTargetException
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:119)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:573)
+	at org.dacapo.harness.GraphChi.iterate(GraphChi.java:39)
+	at org.dacapo.harness.Benchmark.run(Benchmark.java:253)
+	at org.dacapo.harness.TestHarness.runBenchmark(TestHarness.java:225)
+	at org.dacapo.harness.TestHarness.main(TestHarness.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:573)
+	at Harness.main(Unknown Source)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3538)
+	at java.base/java.io.ByteArrayOutputStream.toByteArray(ByteArrayOutputStream.java:195)
+	at edu.cmu.graphchi.shards.MemoryShard.loadAdj(MemoryShard.java:322)
+	at edu.cmu.graphchi.shards.MemoryShard.loadVertices(MemoryShard.java:134)
+	at edu.cmu.graphchi.engine.GraphChiEngine.loadBeforeUpdates(GraphChiEngine.java:621)
+	at edu.cmu.graphchi.engine.GraphChiEngine.run(GraphChiEngine.java:345)
+	at edu.cmu.graphchi.apps.ALSMatrixFactorization.computeALS(ALSMatrixFactorization.java:261)
+	at edu.cmu.graphchi.apps.ALSMatrixFactorization.main(ALSMatrixFactorization.java:220)
+	at java.base/java.lang.invoke.LambdaForm$DMH/0x00007f25e84063a8.invokeStatic(LambdaForm$DMH)
+	at java.base/java.lang.invoke.LambdaForm$MH/0x00007f25e8408bd8.invoke(LambdaForm$MH)
+	at java.base/java.lang.invoke.Invokers$Holder.invokeExact_MT(Invokers$Holder)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(DirectMethodHandleAccessor.java:155)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:573)
+	at org.dacapo.harness.GraphChi.iterate(GraphChi.java:39)
+	at org.dacapo.harness.Benchmark.run(Benchmark.java:253)
+	at org.dacapo.harness.TestHarness.runBenchmark(TestHarness.java:225)
+	at org.dacapo.harness.TestHarness.main(TestHarness.java:170)
+	at java.base/java.lang.invoke.LambdaForm$DMH/0x00007f25e84063a8.invokeStatic(LambdaForm$DMH)
+	at java.base/java.lang.invoke.LambdaForm$MH/0x00007f25e8408bd8.invoke(LambdaForm$MH)
+	at java.base/java.lang.invoke.Invokers$Holder.invokeExact_MT(Invokers$Holder)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(DirectMethodHandleAccessor.java:155)
+	... 3 more
