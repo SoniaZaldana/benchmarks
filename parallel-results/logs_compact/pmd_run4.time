@@ -1,0 +1,34 @@
+WARNING: package jdk.internal.util.jar not in java.base
+===== DaCapo 23.11-chopin pmd starting warmup 1 =====
+Warmup: Benchmark ended 81.196999s
+===== DaCapo 23.11-chopin pmd completed warmup 1 in 80841 msec =====
+===== DaCapo 23.11-chopin pmd starting warmup 2 =====
+Warmup: Benchmark ended 148.837006s
+===== DaCapo 23.11-chopin pmd completed warmup 2 in 67143 msec =====
+===== DaCapo 23.11-chopin pmd starting warmup 3 =====
+Warmup: Benchmark ended 236.317993s
+===== DaCapo 23.11-chopin pmd completed warmup 3 in 87037 msec =====
+===== DaCapo 23.11-chopin pmd starting warmup 4 =====
+Warmup: Benchmark ended 309.153015s
+===== DaCapo 23.11-chopin pmd completed warmup 4 in 72450 msec =====
+===== DaCapo 23.11-chopin pmd starting warmup 5 =====
+Warmup: Benchmark ended 377.192993s
+===== DaCapo 23.11-chopin pmd completed warmup 5 in 67683 msec =====
+===== DaCapo 23.11-chopin pmd starting warmup 6 =====
+Warmup: Benchmark ended 446.244995s
+===== DaCapo 23.11-chopin pmd completed warmup 6 in 68694 msec =====
+===== DaCapo 23.11-chopin pmd starting warmup 7 =====
+Warmup: Benchmark ended 527.713013s
+===== DaCapo 23.11-chopin pmd completed warmup 7 in 81125 msec =====
+===== DaCapo 23.11-chopin pmd starting warmup 8 =====
+Warmup: Benchmark ended 600.408020s
+===== DaCapo 23.11-chopin pmd completed warmup 8 in 72312 msec =====
+===== DaCapo 23.11-chopin pmd starting warmup 9 =====
+Warmup: Benchmark ended 671.080994s
+===== DaCapo 23.11-chopin pmd completed warmup 9 in 70330 msec =====
+===== DaCapo 23.11-chopin pmd starting warmup 10 =====
+Warmup: Benchmark ended 755.023987s
+===== DaCapo 23.11-chopin pmd completed warmup 10 in 83600 msec =====
+===== DaCapo 23.11-chopin pmd starting =====
+Measurable: Benchmark ended 845.661011s
+===== DaCapo 23.11-chopin pmd PASSED in 90263 msec =====

@@ -1,0 +1,56 @@
+WARNING: package jdk.internal.util.jar not in java.base
+===== DaCapo 23.11-chopin lusearch starting warmup 1 =====
+Starting 5242880 requests...
+Completed requests
+Warmup: Benchmark ended 1167.433960s
+===== DaCapo 23.11-chopin lusearch completed warmup 1 in 1164205 msec =====
+===== DaCapo 23.11-chopin lusearch starting warmup 2 =====
+Starting 5242880 requests...
+Completed requests
+Warmup: Benchmark ended 2328.212891s
+===== DaCapo 23.11-chopin lusearch completed warmup 2 in 1159558 msec =====
+===== DaCapo 23.11-chopin lusearch starting warmup 3 =====
+Starting 5242880 requests...
+Completed requests
+Warmup: Benchmark ended 3487.610107s
+===== DaCapo 23.11-chopin lusearch completed warmup 3 in 1158513 msec =====
+===== DaCapo 23.11-chopin lusearch starting warmup 4 =====
+Starting 5242880 requests...
+Completed requests
+Warmup: Benchmark ended 4643.808105s
+===== DaCapo 23.11-chopin lusearch completed warmup 4 in 1155564 msec =====
+===== DaCapo 23.11-chopin lusearch starting warmup 5 =====
+Starting 5242880 requests...
+Completed requests
+Warmup: Benchmark ended 5837.555176s
+===== DaCapo 23.11-chopin lusearch completed warmup 5 in 1193127 msec =====
+===== DaCapo 23.11-chopin lusearch starting warmup 6 =====
+Starting 5242880 requests...
+Completed requests
+Warmup: Benchmark ended 6987.155762s
+===== DaCapo 23.11-chopin lusearch completed warmup 6 in 1148971 msec =====
+===== DaCapo 23.11-chopin lusearch starting warmup 7 =====
+Starting 5242880 requests...
+Completed requests
+Warmup: Benchmark ended 8137.105957s
+===== DaCapo 23.11-chopin lusearch completed warmup 7 in 1149300 msec =====
+===== DaCapo 23.11-chopin lusearch starting warmup 8 =====
+Starting 5242880 requests...
+Completed requests
+Warmup: Benchmark ended 9284.831055s
+===== DaCapo 23.11-chopin lusearch completed warmup 8 in 1147146 msec =====
+===== DaCapo 23.11-chopin lusearch starting warmup 9 =====
+Starting 5242880 requests...
+Completed requests
+Warmup: Benchmark ended 10432.959961s
+===== DaCapo 23.11-chopin lusearch completed warmup 9 in 1147545 msec =====
+===== DaCapo 23.11-chopin lusearch starting warmup 10 =====
+Starting 5242880 requests...
+Completed requests
+Warmup: Benchmark ended 11580.927734s
+===== DaCapo 23.11-chopin lusearch completed warmup 10 in 1147369 msec =====
+===== DaCapo 23.11-chopin lusearch starting =====
+Starting 5242880 requests...
+Completed requests
+Measurable: Benchmark ended 12731.284180s
+===== DaCapo 23.11-chopin lusearch PASSED in 1149796 msec =====
