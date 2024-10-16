@@ -1,0 +1,83 @@
+WARNING: package jdk.internal.util.jar not in java.base
+[2024-10-15 21:04:59,401] ERROR Uncaught exception in scheduled task 'kafka-log-retention' (kafka.utils.KafkaScheduler)
+java.lang.IllegalStateException: Compaction for partition dacapo-4-1 cannot be resumed since it is not paused.
+	at kafka.log.LogCleanerManager.$anonfun$resumeCleaning$2(LogCleanerManager.scala:305)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at kafka.log.LogCleanerManager.$anonfun$resumeCleaning$1(LogCleanerManager.scala:302)
+	at kafka.log.LogCleanerManager.resumeCleaning(LogCleanerManager.scala:301)
+	at kafka.log.LogCleaner.resumeCleaning(LogCleaner.scala:257)
+	at kafka.log.LogManager.cleanupLogs(LogManager.scala:1247)
+	at kafka.log.LogManager.$anonfun$startupWithConfigOverrides$2(LogManager.scala:528)
+	at kafka.utils.KafkaScheduler.$anonfun$schedule$2(KafkaScheduler.scala:116)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:369)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:310)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1576)
+===== DaCapo 23.11-chopin kafka starting warmup 1 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 59.750999s
+===== DaCapo 23.11-chopin kafka completed warmup 1 in 56087 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 2 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 113.940002s
+===== DaCapo 23.11-chopin kafka completed warmup 2 in 52529 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 3 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 166.919006s
+===== DaCapo 23.11-chopin kafka completed warmup 3 in 51816 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 4 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 219.832993s
+===== DaCapo 23.11-chopin kafka completed warmup 4 in 51909 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 5 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 272.328003s
+===== DaCapo 23.11-chopin kafka completed warmup 5 in 51502 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 6 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 324.924011s
+===== DaCapo 23.11-chopin kafka completed warmup 6 in 51592 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 7 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 377.226990s
+===== DaCapo 23.11-chopin kafka completed warmup 7 in 51336 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 8 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 429.829010s
+===== DaCapo 23.11-chopin kafka completed warmup 8 in 51619 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 9 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 482.368988s
+===== DaCapo 23.11-chopin kafka completed warmup 9 in 51581 msec =====
+===== DaCapo 23.11-chopin kafka starting warmup 10 =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Warmup: Benchmark ended 534.724976s
+===== DaCapo 23.11-chopin kafka completed warmup 10 in 51365 msec =====
+===== DaCapo 23.11-chopin kafka starting =====
+Starting 10000000 requests...
+Completed requests
+Finished
+Measurable: Benchmark ended 587.218018s
+===== DaCapo 23.11-chopin kafka PASSED in 51486 msec =====
