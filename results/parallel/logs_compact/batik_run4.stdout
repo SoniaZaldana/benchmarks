@@ -1,0 +1,13 @@
+Version: batik 1.16 (use -p to print nominal benchmark stats)
+About to transcode 30 SVG file(s)
+
+Converting usMetro.svg to /root/tests/benchmarks/dacapo/parallel/scratch_compact/batik_run4/usMetro.png ... ... success
+Converting mapVASR.svg to /root/tests/benchmarks/dacapo/parallel/scratch_compact/batik_run4/mapVASR.png ... ... success
+Converting bavaria.svg to /root/tests/benchmarks/dacapo/parallel/scratch_compact/batik_run4/bavaria.png ... ... success
+Converting lakeTauca.svg to /root/tests/benchmarks/dacapo/parallel/scratch_compact/batik_run4/lakeTauca.png ... ... success
+Converting river.svg to /root/tests/benchmarks/dacapo/parallel/scratch_compact/batik_run4/river.png ... ... success
+Converting tenerife.svg to /root/tests/benchmarks/dacapo/parallel/scratch_compact/batik_run4/tenerife.png ... ... success
+Converting france.svg to /root/tests/benchmarks/dacapo/parallel/scratch_compact/batik_run4/france.png ... ... success
+Converting nrwpTopography.svg to /root/tests/benchmarks/dacapo/parallel/scratch_compact/batik_run4/nrwpTopography.png ... ... success
+Converting velhop.svg to /root/tests/benchmarks/dacapo/parallel/scratch_compact/batik_run4/velhop.png ... ... success
+Converting polytopeCube.svg to /root/tests/benchmarks/dacapo/parallel/scratch_compact/batik_run4/polytopeCube.png ... 

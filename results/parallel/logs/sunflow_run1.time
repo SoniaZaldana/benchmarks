@@ -1,5 +1,0 @@
-WARNING: package jdk.internal.util.jar not in java.base
-===== DaCapo 23.11-chopin sunflow starting warmup 1 =====
-Warmup: Benchmark ended 377.320007s
-===== DaCapo 23.11-chopin sunflow completed warmup 1 in 375666 msec =====
-===== DaCapo 23.11-chopin sunflow starting warmup 2 =====
