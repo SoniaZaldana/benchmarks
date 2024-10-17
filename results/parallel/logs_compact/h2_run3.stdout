@@ -1,4 +1,0 @@
-Using scaled threading model. 2 processors detected, 2 threads used to drive the workload, in a possible range of [1,2048]
-Version: h2 2.2.220 derby 10.15.2.0 (use -p to print nominal benchmark stats)
-Preparing the H2 database...
-TPCC configuration: scale: 128, terminals: 2, transactions: 2500000
