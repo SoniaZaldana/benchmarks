@@ -1,0 +1,62 @@
+WARNING: package jdk.internal.util.jar not in java.base
+Loaded 131072 requests
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (jar:file:/root/tests/benchmarks/dacapo/dacapo-23.11-chopin/jar/spring/spring-petclinic-2.7.3.jar!/BOOT-INF/lib/tomcat-embed-core-9.0.65.jar!/)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+===== DaCapo 23.11-chopin spring starting warmup 1 =====
+Starting 131072 requests...
+Completed requests
+Warmup: Benchmark ended 322.766998s
+===== DaCapo 23.11-chopin spring completed warmup 1 in 310417 msec =====
+===== DaCapo 23.11-chopin spring starting warmup 2 =====
+Starting 131072 requests...
+Completed requests
+Warmup: Benchmark ended 592.168030s
+===== DaCapo 23.11-chopin spring completed warmup 2 in 269324 msec =====
+===== DaCapo 23.11-chopin spring starting warmup 3 =====
+Starting 131072 requests...
+Completed requests
+Warmup: Benchmark ended 846.583984s
+===== DaCapo 23.11-chopin spring completed warmup 3 in 254315 msec =====
+===== DaCapo 23.11-chopin spring starting warmup 4 =====
+Starting 131072 requests...
+Completed requests
+Warmup: Benchmark ended 1097.864990s
+===== DaCapo 23.11-chopin spring completed warmup 4 in 251236 msec =====
+===== DaCapo 23.11-chopin spring starting warmup 5 =====
+Starting 131072 requests...
+Completed requests
+Warmup: Benchmark ended 1346.446045s
+===== DaCapo 23.11-chopin spring completed warmup 5 in 248556 msec =====
+===== DaCapo 23.11-chopin spring starting warmup 6 =====
+Starting 131072 requests...
+Completed requests
+Warmup: Benchmark ended 1590.754028s
+===== DaCapo 23.11-chopin spring completed warmup 6 in 244288 msec =====
+===== DaCapo 23.11-chopin spring starting warmup 7 =====
+Starting 131072 requests...
+Completed requests
+Warmup: Benchmark ended 1834.620972s
+===== DaCapo 23.11-chopin spring completed warmup 7 in 243844 msec =====
+===== DaCapo 23.11-chopin spring starting warmup 8 =====
+Starting 131072 requests...
+Completed requests
+Warmup: Benchmark ended 2080.971924s
+===== DaCapo 23.11-chopin spring completed warmup 8 in 246330 msec =====
+===== DaCapo 23.11-chopin spring starting warmup 9 =====
+Starting 131072 requests...
+Completed requests
+Warmup: Benchmark ended 2323.810059s
+===== DaCapo 23.11-chopin spring completed warmup 9 in 242817 msec =====
+===== DaCapo 23.11-chopin spring starting warmup 10 =====
+Starting 131072 requests...
+Completed requests
+Warmup: Benchmark ended 2565.173096s
+===== DaCapo 23.11-chopin spring completed warmup 10 in 241343 msec =====
+===== DaCapo 23.11-chopin spring starting =====
+Starting 131072 requests...
+Completed requests
+Measurable: Benchmark ended 2808.920898s
+===== DaCapo 23.11-chopin spring PASSED in 243730 msec =====
