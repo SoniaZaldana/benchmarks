@@ -44,7 +44,7 @@ def process_metrics(metric_func, parent_dir, compact, runs):
             metric_func(filtered_gc_logs, bench, run, parent_dir, compact, all_pause_times, cpu_metrics)
 
         write_aggregated_gc_data(all_pause_times, bench, parent_dir, compact, runs)
-        write_cpu_metrics_to_csv(parent_dir, bench, cpu_metrics, compact) 
+        write_cpu_metrics_to_csv(parent_dir, bench, cpu_metrics, compact)
 
 def extract_runtime_metrics(parent_dir, bench, compact, runs):
     metrics = []
@@ -135,18 +135,16 @@ def liveset_size(lines, bench, run, parent_dir, compact):
     write_to_csv(get_output_file_path(parent_dir, bench, 'live', compact), [['GC Event', 'Before GC (MB)', 'After GC (MB)']] + live_set_sizes)
 
 def write_aggregated_gc_data(all_pause_times, bench, parent_dir, compact, runs):
-    aggregated_data = [['GC Event'] + [f'Pause time (ms) Run {i+1}' for i in range(runs)]]
-    max_gc_events = max(len(run) for run in all_pause_times)
+    aggregated_data = [['Run', 'Total Pause Time (ms)', 'GC Event Count']]
 
-    for i in range(max_gc_events):
-        row = [i + 1] + [run_pause_times[i] if len(run_pause_times) > i else 0 for run_pause_times in all_pause_times]
-        aggregated_data.append(row)
+    for run_index in range(runs):
+        run_pause_times = all_pause_times[run_index] if run_index < len(all_pause_times) else []
+        total_pause_time = sum(run_pause_times)
+        gc_event_count = len(run_pause_times)
+        aggregated_data.append([run_index + 1, total_pause_time, gc_event_count])
 
-    total_row = ['Total pause time'] + [sum(row[run_index + 1] for row in aggregated_data[1:]) for run_index in range(runs)]
-    count_row = ['Total event count'] + [sum(1 for row in aggregated_data[1:] if row[run_index + 1] > 0) for run_index in range(runs)]
-
-    aggregated_data += [count_row, total_row]
     write_to_csv(get_output_file_path(parent_dir, bench, 'gc', compact), aggregated_data)
+
 
 def write_cpu_metrics_to_csv(parent_dir, bench, cpu_metrics, compact):
     cpu_file_path = get_output_file_path(parent_dir, bench, 'cpu', compact)
