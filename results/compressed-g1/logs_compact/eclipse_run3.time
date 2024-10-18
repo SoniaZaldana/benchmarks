@@ -1,0 +1,39 @@
+WARNING: package jdk.internal.util.jar not in java.base
+===== DaCapo 23.11-chopin eclipse starting warmup 1 =====
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::loadLibrary has been called by org.eclipse.core.internal.filesystem.local.unix.UnixFileNatives in an unnamed module (file:/root/tests/benchmarks/dacapo/dacapo-23.11-chopin/dat/eclipse/eclipse/plugins/org.eclipse.core.filesystem_1.9.500.v20220817-1539.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Warmup: Benchmark ended 81.639999s
+===== DaCapo 23.11-chopin eclipse completed warmup 1 in 76283 msec =====
+===== DaCapo 23.11-chopin eclipse starting warmup 2 =====
+Warmup: Benchmark ended 144.757996s
+===== DaCapo 23.11-chopin eclipse completed warmup 2 in 56776 msec =====
+===== DaCapo 23.11-chopin eclipse starting warmup 3 =====
+Warmup: Benchmark ended 202.197006s
+===== DaCapo 23.11-chopin eclipse completed warmup 3 in 51694 msec =====
+===== DaCapo 23.11-chopin eclipse starting warmup 4 =====
+Warmup: Benchmark ended 255.259003s
+===== DaCapo 23.11-chopin eclipse completed warmup 4 in 47437 msec =====
+===== DaCapo 23.11-chopin eclipse starting warmup 5 =====
+Warmup: Benchmark ended 309.826996s
+===== DaCapo 23.11-chopin eclipse completed warmup 5 in 49527 msec =====
+===== DaCapo 23.11-chopin eclipse starting warmup 6 =====
+Warmup: Benchmark ended 364.552002s
+===== DaCapo 23.11-chopin eclipse completed warmup 6 in 49967 msec =====
+===== DaCapo 23.11-chopin eclipse starting warmup 7 =====
+Warmup: Benchmark ended 419.183990s
+===== DaCapo 23.11-chopin eclipse completed warmup 7 in 49724 msec =====
+===== DaCapo 23.11-chopin eclipse starting warmup 8 =====
+Warmup: Benchmark ended 468.377014s
+===== DaCapo 23.11-chopin eclipse completed warmup 8 in 44097 msec =====
+===== DaCapo 23.11-chopin eclipse starting warmup 9 =====
+Warmup: Benchmark ended 519.179993s
+===== DaCapo 23.11-chopin eclipse completed warmup 9 in 45624 msec =====
+===== DaCapo 23.11-chopin eclipse starting warmup 10 =====
+Warmup: Benchmark ended 573.299011s
+===== DaCapo 23.11-chopin eclipse completed warmup 10 in 48930 msec =====
+===== DaCapo 23.11-chopin eclipse starting =====
+Measurable: Benchmark ended 628.593994s
+===== DaCapo 23.11-chopin eclipse PASSED in 50193 msec =====

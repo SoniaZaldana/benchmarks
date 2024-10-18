@@ -1,0 +1,34 @@
+WARNING: package jdk.internal.util.jar not in java.base
+===== DaCapo 23.11-chopin avrora starting warmup 1 =====
+Warmup: Benchmark ended 111.408997s
+===== DaCapo 23.11-chopin avrora completed warmup 1 in 111071 msec =====
+===== DaCapo 23.11-chopin avrora starting warmup 2 =====
+Warmup: Benchmark ended 220.404999s
+===== DaCapo 23.11-chopin avrora completed warmup 2 in 108976 msec =====
+===== DaCapo 23.11-chopin avrora starting warmup 3 =====
+Warmup: Benchmark ended 326.834015s
+===== DaCapo 23.11-chopin avrora completed warmup 3 in 106428 msec =====
+===== DaCapo 23.11-chopin avrora starting warmup 4 =====
+Warmup: Benchmark ended 428.760010s
+===== DaCapo 23.11-chopin avrora completed warmup 4 in 101925 msec =====
+===== DaCapo 23.11-chopin avrora starting warmup 5 =====
+Warmup: Benchmark ended 537.895996s
+===== DaCapo 23.11-chopin avrora completed warmup 5 in 109136 msec =====
+===== DaCapo 23.11-chopin avrora starting warmup 6 =====
+Warmup: Benchmark ended 643.604980s
+===== DaCapo 23.11-chopin avrora completed warmup 6 in 105708 msec =====
+===== DaCapo 23.11-chopin avrora starting warmup 7 =====
+Warmup: Benchmark ended 749.151978s
+===== DaCapo 23.11-chopin avrora completed warmup 7 in 105546 msec =====
+===== DaCapo 23.11-chopin avrora starting warmup 8 =====
+Warmup: Benchmark ended 856.645020s
+===== DaCapo 23.11-chopin avrora completed warmup 8 in 107493 msec =====
+===== DaCapo 23.11-chopin avrora starting warmup 9 =====
+Warmup: Benchmark ended 964.424011s
+===== DaCapo 23.11-chopin avrora completed warmup 9 in 107778 msec =====
+===== DaCapo 23.11-chopin avrora starting warmup 10 =====
+Warmup: Benchmark ended 1078.099976s
+===== DaCapo 23.11-chopin avrora completed warmup 10 in 113675 msec =====
+===== DaCapo 23.11-chopin avrora starting =====
+Measurable: Benchmark ended 1186.927002s
+===== DaCapo 23.11-chopin avrora PASSED in 108827 msec =====

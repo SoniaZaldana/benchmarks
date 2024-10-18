@@ -1,0 +1,48 @@
+Using scaled threading model. 2 processors detected, 2 threads used to drive the workload, in a possible range of [1,unlimited]
+Version: kafka 3.3.1 (use -p to print nominal benchmark stats)
+Starting Zookeeper...
+Starting Kafka Server...
+Trogdor is running the workload....
+5%10%15%20%25%30%35%40%45%50%55%60%65%70%75%80%85%90%95%100%
+===== DaCapo simple tail latency: 50% 22794 usec, 90% 136359 usec, 99% 693260 usec, 99.9% 844916 usec, 99.99% 869787 usec, max 872587 usec, measured over 10000000 events =====
+===== DaCapo metered tail latency: 50% 1738724 usec, 90% 2561351 usec, 99% 2711202 usec, 99.9% 2778933 usec, 99.99% 2792270 usec, max 2795783 usec, measured over 10000000 events =====
+Trogdor is running the workload....
+5%10%15%20%25%30%35%40%45%50%55%60%65%70%75%80%85%90%95%100%
+===== DaCapo simple tail latency: 50% 19165 usec, 90% 33590 usec, 99% 170122 usec, 99.9% 293449 usec, 99.99% 315399 usec, max 320010 usec, measured over 10000000 events =====
+===== DaCapo metered tail latency: 50% 192277 usec, 90% 405748 usec, 99% 481024 usec, 99.9% 530919 usec, 99.99% 556626 usec, max 560786 usec, measured over 10000000 events =====
+Trogdor is running the workload....
+5%10%15%20%25%30%35%40%45%50%55%60%65%70%75%80%85%90%95%100%
+===== DaCapo simple tail latency: 50% 19197 usec, 90% 32583 usec, 99% 150222 usec, 99.9% 228782 usec, 99.99% 255191 usec, max 259168 usec, measured over 10000000 events =====
+===== DaCapo metered tail latency: 50% 19759 usec, 90% 36667 usec, 99% 150222 usec, 99.9% 230522 usec, 99.99% 255191 usec, max 259168 usec, measured over 10000000 events =====
+Trogdor is running the workload....
+5%10%15%20%25%30%35%40%45%50%55%60%65%70%75%80%85%90%95%100%
+===== DaCapo simple tail latency: 50% 18747 usec, 90% 28114 usec, 99% 124895 usec, 99.9% 258203 usec, 99.99% 273377 usec, max 279336 usec, measured over 10000000 events =====
+===== DaCapo metered tail latency: 50% 20627 usec, 90% 53269 usec, 99% 131592 usec, 99.9% 258203 usec, 99.99% 273377 usec, max 279336 usec, measured over 10000000 events =====
+Trogdor is running the workload....
+5%10%15%20%25%30%35%40%45%50%55%60%65%70%75%80%85%90%95%100%
+===== DaCapo simple tail latency: 50% 18184 usec, 90% 27758 usec, 99% 126080 usec, 99.9% 214339 usec, 99.99% 227553 usec, max 228380 usec, measured over 10000000 events =====
+===== DaCapo metered tail latency: 50% 23555 usec, 90% 90528 usec, 99% 145417 usec, 99.9% 214339 usec, 99.99% 227553 usec, max 228380 usec, measured over 10000000 events =====
+Trogdor is running the workload....
+5%10%15%20%25%30%35%40%45%50%55%60%65%70%75%80%85%90%95%100%
+===== DaCapo simple tail latency: 50% 19599 usec, 90% 32049 usec, 99% 136810 usec, 99.9% 227235 usec, 99.99% 242859 usec, max 247698 usec, measured over 10000000 events =====
+===== DaCapo metered tail latency: 50% 21864 usec, 90% 62181 usec, 99% 136818 usec, 99.9% 227235 usec, 99.99% 242859 usec, max 247698 usec, measured over 10000000 events =====
+Trogdor is running the workload....
+5%10%15%20%25%30%35%40%45%50%55%60%65%70%75%80%85%90%95%100%
+===== DaCapo simple tail latency: 50% 19771 usec, 90% 31039 usec, 99% 127688 usec, 99.9% 170192 usec, 99.99% 189222 usec, max 197769 usec, measured over 10000000 events =====
+===== DaCapo metered tail latency: 50% 21028 usec, 90% 46149 usec, 99% 131487 usec, 99.9% 170784 usec, 99.99% 189222 usec, max 197769 usec, measured over 10000000 events =====
+Trogdor is running the workload....
+5%10%15%20%25%30%35%40%45%50%55%60%65%70%75%80%85%90%95%100%
+===== DaCapo simple tail latency: 50% 18075 usec, 90% 27363 usec, 99% 115740 usec, 99.9% 158601 usec, 99.99% 211484 usec, max 212828 usec, measured over 10000000 events =====
+===== DaCapo metered tail latency: 50% 19095 usec, 90% 57119 usec, 99% 122292 usec, 99.9% 158627 usec, 99.99% 211484 usec, max 212828 usec, measured over 10000000 events =====
+Trogdor is running the workload....
+5%10%15%20%25%30%35%40%45%50%55%60%65%70%75%80%85%90%95%100%
+===== DaCapo simple tail latency: 50% 17544 usec, 90% 25815 usec, 99% 119103 usec, 99.9% 168865 usec, 99.99% 272531 usec, max 275565 usec, measured over 10000000 events =====
+===== DaCapo metered tail latency: 50% 51003 usec, 90% 107675 usec, 99% 164170 usec, 99.9% 248693 usec, 99.99% 272531 usec, max 275565 usec, measured over 10000000 events =====
+Trogdor is running the workload....
+5%10%15%20%25%30%35%40%45%50%55%60%65%70%75%80%85%90%95%100%
+===== DaCapo simple tail latency: 50% 17457 usec, 90% 25935 usec, 99% 112947 usec, 99.9% 129316 usec, 99.99% 230507 usec, max 240125 usec, measured over 10000000 events =====
+===== DaCapo metered tail latency: 50% 63405 usec, 90% 96350 usec, 99% 153211 usec, 99.9% 181571 usec, 99.99% 230507 usec, max 240125 usec, measured over 10000000 events =====
+Trogdor is running the workload....
+5%10%15%20%25%30%35%40%45%50%55%60%65%70%75%80%85%90%95%100%
+===== DaCapo simple tail latency: 50% 17805 usec, 90% 27181 usec, 99% 129134 usec, 99.9% 163944 usec, 99.99% 209201 usec, max 211302 usec, measured over 10000000 events =====
+===== DaCapo metered tail latency: 50% 22507 usec, 90% 57795 usec, 99% 130195 usec, 99.9% 163944 usec, 99.99% 209201 usec, max 211302 usec, measured over 10000000 events =====

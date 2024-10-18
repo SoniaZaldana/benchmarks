@@ -1,0 +1,34 @@
+WARNING: package jdk.internal.util.jar not in java.base
+===== DaCapo 23.11-chopin luindex starting warmup 1 =====
+Warmup: Benchmark ended 666.338989s
+===== DaCapo 23.11-chopin luindex completed warmup 1 in 634888 msec =====
+===== DaCapo 23.11-chopin luindex starting warmup 2 =====
+Warmup: Benchmark ended 1326.369019s
+===== DaCapo 23.11-chopin luindex completed warmup 2 in 659835 msec =====
+===== DaCapo 23.11-chopin luindex starting warmup 3 =====
+Warmup: Benchmark ended 1991.635010s
+===== DaCapo 23.11-chopin luindex completed warmup 3 in 665101 msec =====
+===== DaCapo 23.11-chopin luindex starting warmup 4 =====
+Warmup: Benchmark ended 2633.522949s
+===== DaCapo 23.11-chopin luindex completed warmup 4 in 641716 msec =====
+===== DaCapo 23.11-chopin luindex starting warmup 5 =====
+Warmup: Benchmark ended 3273.586914s
+===== DaCapo 23.11-chopin luindex completed warmup 5 in 639900 msec =====
+===== DaCapo 23.11-chopin luindex starting warmup 6 =====
+Warmup: Benchmark ended 3954.040039s
+===== DaCapo 23.11-chopin luindex completed warmup 6 in 680284 msec =====
+===== DaCapo 23.11-chopin luindex starting warmup 7 =====
+Warmup: Benchmark ended 4606.216797s
+===== DaCapo 23.11-chopin luindex completed warmup 7 in 652027 msec =====
+===== DaCapo 23.11-chopin luindex starting warmup 8 =====
+Warmup: Benchmark ended 5272.415039s
+===== DaCapo 23.11-chopin luindex completed warmup 8 in 666034 msec =====
+===== DaCapo 23.11-chopin luindex starting warmup 9 =====
+Warmup: Benchmark ended 6007.857910s
+===== DaCapo 23.11-chopin luindex completed warmup 9 in 735284 msec =====
+===== DaCapo 23.11-chopin luindex starting warmup 10 =====
+Warmup: Benchmark ended 6721.735840s
+===== DaCapo 23.11-chopin luindex completed warmup 10 in 713713 msec =====
+===== DaCapo 23.11-chopin luindex starting =====
+Measurable: Benchmark ended 7436.250000s
+===== DaCapo 23.11-chopin luindex PASSED in 714362 msec =====

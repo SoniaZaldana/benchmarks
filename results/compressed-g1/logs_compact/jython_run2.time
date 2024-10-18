@@ -1,0 +1,34 @@
+WARNING: package jdk.internal.util.jar not in java.base
+===== DaCapo 23.11-chopin jython starting warmup 1 =====
+Warmup: Benchmark ended 181.602005s
+===== DaCapo 23.11-chopin jython completed warmup 1 in 179197 msec =====
+===== DaCapo 23.11-chopin jython starting warmup 2 =====
+Warmup: Benchmark ended 335.464996s
+===== DaCapo 23.11-chopin jython completed warmup 2 in 153854 msec =====
+===== DaCapo 23.11-chopin jython starting warmup 3 =====
+Warmup: Benchmark ended 485.428009s
+===== DaCapo 23.11-chopin jython completed warmup 3 in 149959 msec =====
+===== DaCapo 23.11-chopin jython starting warmup 4 =====
+Warmup: Benchmark ended 634.581970s
+===== DaCapo 23.11-chopin jython completed warmup 4 in 149150 msec =====
+===== DaCapo 23.11-chopin jython starting warmup 5 =====
+Warmup: Benchmark ended 788.403015s
+===== DaCapo 23.11-chopin jython completed warmup 5 in 153814 msec =====
+===== DaCapo 23.11-chopin jython starting warmup 6 =====
+Warmup: Benchmark ended 941.684021s
+===== DaCapo 23.11-chopin jython completed warmup 6 in 153276 msec =====
+===== DaCapo 23.11-chopin jython starting warmup 7 =====
+Warmup: Benchmark ended 1084.073975s
+===== DaCapo 23.11-chopin jython completed warmup 7 in 142385 msec =====
+===== DaCapo 23.11-chopin jython starting warmup 8 =====
+Warmup: Benchmark ended 1226.161987s
+===== DaCapo 23.11-chopin jython completed warmup 8 in 142084 msec =====
+===== DaCapo 23.11-chopin jython starting warmup 9 =====
+Warmup: Benchmark ended 1369.368042s
+===== DaCapo 23.11-chopin jython completed warmup 9 in 143202 msec =====
+===== DaCapo 23.11-chopin jython starting warmup 10 =====
+Warmup: Benchmark ended 1513.625000s
+===== DaCapo 23.11-chopin jython completed warmup 10 in 144252 msec =====
+===== DaCapo 23.11-chopin jython starting =====
+Measurable: Benchmark ended 1655.754028s
+===== DaCapo 23.11-chopin jython PASSED in 142124 msec =====
