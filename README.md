@@ -44,6 +44,16 @@ To extract liveset sizes, I force full garbage collections using a jcmd’s `GC.
 I also do this after warming up for 20 iterations. Then, I run each benchmark 10 times and pepper in full garbage collections periodically during that period. 
 To discard gc logs for warmup iterations, I implemented a custom callback to print to stderr when an interaction is a warmup one or a measurable one along with their respective timestamps. 
 
+### Machine specs for tests
+Red Hat KVM
+Intel Xeon Processor (Skylake, IBRS)
+4096 MB memory, 55 GB disk space
+Fedora 39 x84_64
+
+### Lilliput commit I'm testing against
+[https://github.com/openjdk/jdk/pull/20677/commits/b289ef885816958d9806c76f473b10e34a39e247
+](b289ef885816958d9806c76f473b10e34a39e247)
+
 ## Scripts 
 
 This repository consists of three main scripts: 
@@ -66,19 +76,7 @@ Similar to the script above, except it peppers in periodic full gargabe collecti
 ### garbage.py 
 ```
 ================= Garbage Log Parser ===============
-usage: garbage.py [-h] [-liveset] [-gc] [-runtime] -parent_dir PARENT_DIR [-compact] -runs RUNS
-
-Process Java GC logs.
-
-options:
-  -h, --help            show this help message and exit
-  -liveset              Calculate live set sizes. Stores as csv file ending .live
-  -gc                   Gather GC metrics. Stores as csv file ending .gc
-  -runtime              Extract runtime metrics from *.time files.
-  -parent_dir PARENT_DIR
-                        Parent directory for logs (e.g., parallel or g1)
-  -compact              Use compact memory option, affecting output file paths
-  -runs RUNS            Number of runs to consider for log file naming
+usage: garbage.py [-h] [-liveset] [-compact] -n N parent_dir
 ```
 Python script to analyze all the files we generated above and extract the following metrics: 
 
