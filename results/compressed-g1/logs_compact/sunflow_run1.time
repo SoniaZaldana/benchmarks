@@ -1,0 +1,34 @@
+WARNING: package jdk.internal.util.jar not in java.base
+===== DaCapo 23.11-chopin sunflow starting warmup 1 =====
+Warmup: Benchmark ended 349.345001s
+===== DaCapo 23.11-chopin sunflow completed warmup 1 in 347883 msec =====
+===== DaCapo 23.11-chopin sunflow starting warmup 2 =====
+Warmup: Benchmark ended 672.960022s
+===== DaCapo 23.11-chopin sunflow completed warmup 2 in 322622 msec =====
+===== DaCapo 23.11-chopin sunflow starting warmup 3 =====
+Warmup: Benchmark ended 1005.895020s
+===== DaCapo 23.11-chopin sunflow completed warmup 3 in 332008 msec =====
+===== DaCapo 23.11-chopin sunflow starting warmup 4 =====
+Warmup: Benchmark ended 1369.308960s
+===== DaCapo 23.11-chopin sunflow completed warmup 4 in 362434 msec =====
+===== DaCapo 23.11-chopin sunflow starting warmup 5 =====
+Warmup: Benchmark ended 1692.814941s
+===== DaCapo 23.11-chopin sunflow completed warmup 5 in 322615 msec =====
+===== DaCapo 23.11-chopin sunflow starting warmup 6 =====
+Warmup: Benchmark ended 1992.645996s
+===== DaCapo 23.11-chopin sunflow completed warmup 6 in 298990 msec =====
+===== DaCapo 23.11-chopin sunflow starting warmup 7 =====
+Warmup: Benchmark ended 2296.157959s
+===== DaCapo 23.11-chopin sunflow completed warmup 7 in 302677 msec =====
+===== DaCapo 23.11-chopin sunflow starting warmup 8 =====
+Warmup: Benchmark ended 2592.468018s
+===== DaCapo 23.11-chopin sunflow completed warmup 8 in 295478 msec =====
+===== DaCapo 23.11-chopin sunflow starting warmup 9 =====
+Warmup: Benchmark ended 2909.306885s
+===== DaCapo 23.11-chopin sunflow completed warmup 9 in 316006 msec =====
+===== DaCapo 23.11-chopin sunflow starting warmup 10 =====
+Warmup: Benchmark ended 3265.346924s
+===== DaCapo 23.11-chopin sunflow completed warmup 10 in 355211 msec =====
+===== DaCapo 23.11-chopin sunflow starting =====
+Measurable: Benchmark ended 3565.556885s
+===== DaCapo 23.11-chopin sunflow PASSED in 299379 msec =====
