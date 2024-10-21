@@ -1,0 +1,57 @@
+Using scaled threading model. 2 processors detected, 2 threads used to drive the workload, in a possible range of [1,unlimited]
+Version: jme 3.6.0-stable (use -p to print nominal benchmark stats)
+Initializing......done.
+10%20%30%40%50%60%70%80%90%100%
+Rendered 8000 frames for TestMultiPostWater
+===== DaCapo simple tail latency: 50% 16703 usec, 90% 17722 usec, 99% 17772 usec, 99.9% 17823 usec, 99.99% 89635 usec, max 89635 usec, measured over 8000 events =====
+===== DaCapo metered tail latency: 50% 17653 usec, 90% 73111 usec, 99% 116934 usec, 99.9% 130432 usec, 99.99% 147751 usec, max 147751 usec, measured over 8000 events =====
+Initializing......done.
+10%20%30%40%50%60%70%80%90%100%
+Rendered 8000 frames for TestMultiPostWater
+===== DaCapo simple tail latency: 50% 16695 usec, 90% 17719 usec, 99% 17768 usec, 99.9% 17793 usec, 99.99% 32104 usec, max 32104 usec, measured over 8000 events =====
+===== DaCapo metered tail latency: 50% 36471 usec, 90% 62311 usec, 99% 69587 usec, 99.9% 70707 usec, 99.99% 71426 usec, max 71426 usec, measured over 8000 events =====
+Initializing......done.
+10%20%30%40%50%60%70%80%90%100%
+Rendered 8000 frames for TestMultiPostWater
+===== DaCapo simple tail latency: 50% 16695 usec, 90% 17725 usec, 99% 17776 usec, 99.9% 17801 usec, 99.99% 32811 usec, max 32811 usec, measured over 8000 events =====
+===== DaCapo metered tail latency: 50% 37781 usec, 90% 85070 usec, 99% 104551 usec, 99.9% 107073 usec, 99.99% 107598 usec, max 107598 usec, measured over 8000 events =====
+Initializing......done.
+10%20%30%40%50%60%70%80%90%100%
+Rendered 8000 frames for TestMultiPostWater
+===== DaCapo simple tail latency: 50% 16695 usec, 90% 17719 usec, 99% 17775 usec, 99.9% 17805 usec, 99.99% 31137 usec, max 31137 usec, measured over 8000 events =====
+===== DaCapo metered tail latency: 50% 22839 usec, 90% 48068 usec, 99% 54880 usec, 99.9% 56414 usec, 99.99% 56903 usec, max 56903 usec, measured over 8000 events =====
+Initializing......done.
+10%20%30%40%50%60%70%80%90%100%
+Rendered 8000 frames for TestMultiPostWater
+===== DaCapo simple tail latency: 50% 16695 usec, 90% 17711 usec, 99% 17768 usec, 99.9% 17793 usec, 99.99% 31294 usec, max 31294 usec, measured over 8000 events =====
+===== DaCapo metered tail latency: 50% 21821 usec, 90% 29811 usec, 99% 36024 usec, 99.9% 37001 usec, 99.99% 37251 usec, max 37251 usec, measured over 8000 events =====
+Initializing......done.
+10%20%30%40%50%60%70%80%90%100%
+Rendered 8000 frames for TestMultiPostWater
+===== DaCapo simple tail latency: 50% 16695 usec, 90% 17719 usec, 99% 17768 usec, 99.9% 17809 usec, 99.99% 29641 usec, max 29641 usec, measured over 8000 events =====
+===== DaCapo metered tail latency: 50% 17674 usec, 90% 33598 usec, 99% 38118 usec, 99.9% 38812 usec, 99.99% 39163 usec, max 39163 usec, measured over 8000 events =====
+Initializing......done.
+10%20%30%40%50%60%70%80%90%100%
+Rendered 8000 frames for TestMultiPostWater
+===== DaCapo simple tail latency: 50% 16699 usec, 90% 17719 usec, 99% 17768 usec, 99.9% 17793 usec, 99.99% 29613 usec, max 29613 usec, measured over 8000 events =====
+===== DaCapo metered tail latency: 50% 17678 usec, 90% 29014 usec, 99% 33716 usec, 99.9% 34430 usec, 99.99% 35025 usec, max 35025 usec, measured over 8000 events =====
+Initializing......done.
+10%20%30%40%50%60%70%80%90%100%
+Rendered 8000 frames for TestMultiPostWater
+===== DaCapo simple tail latency: 50% 16703 usec, 90% 17719 usec, 99% 17768 usec, 99.9% 17788 usec, 99.99% 29664 usec, max 29664 usec, measured over 8000 events =====
+===== DaCapo metered tail latency: 50% 32911 usec, 90% 40862 usec, 99% 43864 usec, 99.9% 45186 usec, 99.99% 45753 usec, max 45753 usec, measured over 8000 events =====
+Initializing......done.
+10%20%30%40%50%60%70%80%90%100%
+Rendered 8000 frames for TestMultiPostWater
+===== DaCapo simple tail latency: 50% 16699 usec, 90% 17719 usec, 99% 17770 usec, 99.9% 17801 usec, 99.99% 29091 usec, max 29091 usec, measured over 8000 events =====
+===== DaCapo metered tail latency: 50% 32995 usec, 90% 75038 usec, 99% 77858 usec, 99.9% 78567 usec, 99.99% 78908 usec, max 78908 usec, measured over 8000 events =====
+Initializing......done.
+10%20%30%40%50%60%70%80%90%100%
+Rendered 8000 frames for TestMultiPostWater
+===== DaCapo simple tail latency: 50% 16703 usec, 90% 17719 usec, 99% 17768 usec, 99.9% 17801 usec, 99.99% 29214 usec, max 29214 usec, measured over 8000 events =====
+===== DaCapo metered tail latency: 50% 41640 usec, 90% 94106 usec, 99% 107630 usec, 99.9% 108615 usec, 99.99% 109010 usec, max 109010 usec, measured over 8000 events =====
+Initializing......done.
+10%20%30%40%50%60%70%80%90%100%
+Rendered 8000 frames for TestMultiPostWater
+===== DaCapo simple tail latency: 50% 16703 usec, 90% 17711 usec, 99% 17768 usec, 99.9% 17784 usec, 99.99% 29781 usec, max 29781 usec, measured over 8000 events =====
+===== DaCapo metered tail latency: 50% 38769 usec, 90% 51156 usec, 99% 55109 usec, 99.9% 56309 usec, 99.99% 56599 usec, max 56599 usec, measured over 8000 events =====

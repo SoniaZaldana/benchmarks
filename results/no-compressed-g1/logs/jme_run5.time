@@ -1,0 +1,56 @@
+WARNING: package jdk.internal.util.jar not in java.base
+===== DaCapo 23.11-chopin jme starting warmup 1 =====
+Starting 8000 requests...
+Completed requests
+Warmup: Benchmark ended 138.270004s
+===== DaCapo 23.11-chopin jme completed warmup 1 in 137584 msec =====
+===== DaCapo 23.11-chopin jme starting warmup 2 =====
+Starting 8000 requests...
+Completed requests
+Warmup: Benchmark ended 275.066010s
+===== DaCapo 23.11-chopin jme completed warmup 2 in 136779 msec =====
+===== DaCapo 23.11-chopin jme starting warmup 3 =====
+Starting 8000 requests...
+Completed requests
+Warmup: Benchmark ended 412.010010s
+===== DaCapo 23.11-chopin jme completed warmup 3 in 136936 msec =====
+===== DaCapo 23.11-chopin jme starting warmup 4 =====
+Starting 8000 requests...
+Completed requests
+Warmup: Benchmark ended 548.994995s
+===== DaCapo 23.11-chopin jme completed warmup 4 in 136980 msec =====
+===== DaCapo 23.11-chopin jme starting warmup 5 =====
+Starting 8000 requests...
+Completed requests
+Warmup: Benchmark ended 685.812012s
+===== DaCapo 23.11-chopin jme completed warmup 5 in 136813 msec =====
+===== DaCapo 23.11-chopin jme starting warmup 6 =====
+Starting 8000 requests...
+Completed requests
+Warmup: Benchmark ended 822.775024s
+===== DaCapo 23.11-chopin jme completed warmup 6 in 136958 msec =====
+===== DaCapo 23.11-chopin jme starting warmup 7 =====
+Starting 8000 requests...
+Completed requests
+Warmup: Benchmark ended 959.398987s
+===== DaCapo 23.11-chopin jme completed warmup 7 in 136620 msec =====
+===== DaCapo 23.11-chopin jme starting warmup 8 =====
+Starting 8000 requests...
+Completed requests
+Warmup: Benchmark ended 1096.390991s
+===== DaCapo 23.11-chopin jme completed warmup 8 in 136988 msec =====
+===== DaCapo 23.11-chopin jme starting warmup 9 =====
+Starting 8000 requests...
+Completed requests
+Warmup: Benchmark ended 1233.336060s
+===== DaCapo 23.11-chopin jme completed warmup 9 in 136939 msec =====
+===== DaCapo 23.11-chopin jme starting warmup 10 =====
+Starting 8000 requests...
+Completed requests
+Warmup: Benchmark ended 1370.234009s
+===== DaCapo 23.11-chopin jme completed warmup 10 in 136893 msec =====
+===== DaCapo 23.11-chopin jme starting =====
+Starting 8000 requests...
+Completed requests
+Measurable: Benchmark ended 1507.145996s
+===== DaCapo 23.11-chopin jme PASSED in 136906 msec =====
